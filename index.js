@@ -132,7 +132,7 @@ app.use(express.json({ limit: "1000mb" }));
 app.use(express.urlencoded({ limit: "1000mb", extended: true }));
 
 // Set CSP Headers
-app.use((req, res, next) => {
+app.use((req, res, next) => { 
   res.setHeader(
     "Content-Security-Policy",
     "default-src 'self'; connect-src 'self' https://ctr-frontend-metasense.vercel.app https://ctr-backend-metasense.vercel.app"
