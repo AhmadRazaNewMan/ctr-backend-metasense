@@ -45,7 +45,7 @@ app.use(express.urlencoded({ limit: "500mb", extended: true }));
 //CORS
 const corsOptions = {
   origin: [
-    // "http://localhost:3000",
+    "http://localhost:3000",
     // "https://cti-user.vercel.app",
     // "https://cti-admin.vercel.app",
   ],
