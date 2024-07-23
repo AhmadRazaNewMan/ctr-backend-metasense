@@ -131,12 +131,13 @@ app.use(express.json({ limit: "1000mb" }));
 app.use(express.urlencoded({ limit: "1000mb", extended: true }));
 
 // Set CSP Headers
-app.use((req, res, next) => {
-  res.setHeader(
-    "Content-Security-Policy",
-    "default-src 'self'; connect-src 'self' https://ctr-frontend-metasense.vercel.app https://ctr-backend-metasense.vercel.app"
-  );
-  next();
+app.use(function( req, res, next ) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "x-requested-with, content-type");
+  res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
+  res.header("Access-Control-Allow-Credentials", "true");
+  res.header("Access-Control-Max-Age", "1000000000");
+  if ('OPTIONS' == req.method) { res.send(200); } else { next(); } 
 });
 
 // CORS

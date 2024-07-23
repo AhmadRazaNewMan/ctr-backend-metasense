@@ -23,7 +23,7 @@ const uploadDoc = multer({ storage: storage });
 
 // Routes
 router.route("/upload").post(uploadDoc.single("document"), uploadDocument);
-router.route("/upload-llama").post(uploadDoc.single("document"), uploadDocumentLlama);
+router.route("/upload-llama").post(uploadDoc.single("document"), uploadDocumentLlama,(req,res));
 router.route("/upload-unstructured").post(uploadDoc.single("document"), uploadDocumentUnstructured);
 router.route("/store-structured-data/:id").post(storeStructureData);
 router.route("/get-structured-data").post(getStructureData);
