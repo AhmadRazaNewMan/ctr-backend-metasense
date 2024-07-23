@@ -1,0 +1,50 @@
+{
+  "name": "cti-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "start": "pm2 start index.js --name my-app --no-daemon",
+    "stop": "pm2 stop my-app",
+    "restart": "pm2 restart my-app",
+    "delete": "pm2 delete my-app",
+    "logs": "pm2 logs my-app",
+    "status": "pm2 show my-app"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "temp/*"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@adobe/pdfservices-node-sdk": "^3.4.2",
+    "@pinecone-database/pinecone": "^2.0.1",
+    "@supabase/supabase-js": "^2.39.6",
+    "adm-zip": "^0.5.10",
+    "axios": "^1.6.7",
+    "body-parser": "^1.20.2",
+    "bull": "^4.12.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "form-data": "^4.0.0",
+    "ioredis": "^5.4.1",
+    "langchain": "^0.1.13",
+    "languagedetect": "^2.0.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.0.3",
+    "page-count": "^0.0.4",
+    "pg": "^8.12.0",
+    "pm2": "^5.4.0",
+    "redis": "^4.6.14",
+    "unstructured-client": "^0.10.6",
+    "xlsx": "^0.18.5"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
