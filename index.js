@@ -44,17 +44,17 @@ app.use(express.json({ limit: "500mb" }));
 app.use(express.urlencoded({ limit: "500mb", extended: true }));
 
 // CORS configuration
-const corsOptions = {
-  origin: [
-    // Add your frontend domains here
-    "https://ctr-frontend-metasense.vercel.app",
-  ],
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  preflightContinue: false,
-  optionsSuccessStatus: 204,
-};
+// const corsOptions = {
+//   origin: [
+//     // Add your frontend domains here
+//     "https://ctr-frontend-metasense.vercel.app",
+//   ],
+//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//   preflightContinue: false,
+//   optionsSuccessStatus: 204,
+// };
 
-app.use(cors(corsOptions));
+app.use(cors("*"));
 
 // Configuring ENV
 dotenv.config();
