@@ -86,6 +86,7 @@
 
 
 
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -134,11 +135,10 @@ app.use(express.urlencoded({ limit: "1000mb", extended: true }));
 app.use((req, res, next) => {
   res.setHeader(
     "Content-Security-Policy",
-    "default-src 'self' *; connect-src 'self' *; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval';"
+    "default-src 'self'; connect-src 'self' https://ctr-frontend-metasense.vercel.app https://ctr-backend-metasense.vercel.app"
   );
   next();
 });
-
 
 // CORS
 const corsOptions = {
@@ -178,4 +178,3 @@ const server = app.listen(PORT, () => {
 });
 
 server.setTimeout(50 * 60 * 1000);
-
