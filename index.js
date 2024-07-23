@@ -6,10 +6,10 @@ const app = express();
 const path = require("path");
 const { fork } = require("child_process");
 
-//Queues
+// Queues
 const documentQueue = require("./queues/documentQueue");
 
-//Connect Redis
+// Connect Redis
 const { connectRedis } = require("./config/redis");
 let cacheConnection;
 
@@ -33,7 +33,7 @@ async function restartServer() {
 const monitorScript = path.join(__dirname, "monitor.js");
 fork(monitorScript);
 
-//Project files and routes
+// Project files and routes
 const apiRouter = require("./routes");
 
 // Middlewares
@@ -42,13 +42,13 @@ app.use(express.static("public"));
 app.use(express.json({ limit: "500mb" }));
 app.use(express.urlencoded({ limit: "500mb", extended: true }));
 
-//CORS
+// CORS
 const corsOptions = {
   origin: [
     // "http://localhost:3000",
     // "https://cti-user.vercel.app",
     // "https://cti-admin.vercel.app",
-   " https://ctr-frontend-metasense.vercel.app/"
+    "https://ctr-frontend-metasense.vercel.app"
   ],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   preflightContinue: false,
@@ -57,13 +57,13 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-//Configuring ENV
+// Configuring ENV
 dotenv.config();
 
-//Connecting routes
+// Connecting routes
 app.use("/api", apiRouter);
 
-//Clean-Up
+// Clean-Up
 const gracefulShutdown = () => {
   console.log("Shutting down gracefully...");
   cacheConnection.quit();
@@ -80,7 +80,6 @@ process.on("SIGTERM", gracefulShutdown);
 const PORT = process.env.PORT || 5000;
 const server = app.listen(PORT, () => {
   console.log(`Your app is running on PORT ${PORT}`);
-  
 });
 
 server.setTimeout(50 * 60 * 1000);
