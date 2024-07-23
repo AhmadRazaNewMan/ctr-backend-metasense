@@ -79,7 +79,7 @@ module.exports.generateFinalPromptForTOTScope1 = (basePrompt, year) => {
   Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
     
   Context data: ${basePrompt}.`;
-  const column = { tot_scope_1: "-" };
+  const column = { scope_1_total: "-" };
 
   return { finalPrompt, column };
 };
@@ -110,7 +110,7 @@ module.exports.generateFinalPromptForFuelForServiceVehicle = (
   Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
     
   Context data: ${basePrompt}.`;
-  const column = { fuel_service_vehicle_fleet: "-" };
+  const column = { scope_1_company_vehicles: "-" };
 
   return { finalPrompt, column };
 };
@@ -141,7 +141,7 @@ module.exports.generateFinalPromptForFacilityStationary = (
   Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
     
   Context data: ${basePrompt}.`;
-  const column = { facility_stationary_combustion_and_refrigerants: "-" };
+  const column = { scope_1_company_facilities: "-" };
 
   return { finalPrompt, column };
 };
@@ -169,7 +169,7 @@ module.exports.generateFinalPromptForTOTScope2 = (basePrompt, year) => {
   Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
     
   Context data: ${basePrompt}.`;
-  const column = { tot_scope_2: "-" };
+  const column = { scope_2_total: "-" };
 
   return { finalPrompt, column };
 };
@@ -200,7 +200,7 @@ module.exports.generateFinalPromptForPurchaseEnergyLocation = (
   Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
     
   Context data: ${basePrompt}.`;
-  const column = { purchased_energy_location_based: "-" };
+  const column = { scope_2_purchased_energy_location_based: "-" };
 
   return { finalPrompt, column };
 };
@@ -231,7 +231,7 @@ module.exports.generateFinalPromptForPurchaseEnergyMarket = (
     Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
       
     Context data: ${basePrompt}.`;
-  const column = { purchased_energy_market_based: "-" };
+  const column = { scope_2_purchased_energy_market_based: "-" };
 
   return { finalPrompt, column };
 };
@@ -259,7 +259,7 @@ module.exports.generateFinalPromptForTOTScope3 = (basePrompt, year) => {
   Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
     
   Context data: ${basePrompt}.`;
-  const column = { tot_scope_3: "-" };
+  const column = { scope_3_total: "-" };
 
   return { finalPrompt, column };
 };
@@ -290,7 +290,7 @@ module.exports.generateFinalPromptForUpstreamPurchasedGoodsAndServices = (
     Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
       
     Context data: ${basePrompt}.`;
-  const column = { upstream_purchased_goods_and_services: "-" };
+  const column = { scope_3_1_purchased_goods_and_services: "-" };
 
   return { finalPrompt, column };
 };
@@ -318,7 +318,7 @@ module.exports.generateFinalPromptForCapitalGoods = (basePrompt, year) => {
     Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
       
     Context data: ${basePrompt}.`;
-  const column = { capital_goods: "-" };
+  const column = { scope_3_2_capital_goods: "-" };
 
   return { finalPrompt, column };
 };
@@ -349,7 +349,7 @@ module.exports.generateFinalPromptForFuelAndEnergyRelatedActivities = (
     Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
       
     Context data: ${basePrompt}.`;
-  const column = { fuel_and_energy_related_activities: "-" };
+  const column = { scope_3_3_fuel_and_energy_related_activities: "-" };
 
   return { finalPrompt, column };
 };
@@ -380,7 +380,7 @@ module.exports.generateFinalPromptForUpstreamTransportationAndDistribution = (
     Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
       
     Context data: ${basePrompt}.`;
-  const column = { upstream_transportation_and_distribution: "-" };
+  const column = { scope_3_4_upstream_transportation_and_distribution: "-" };
 
   return { finalPrompt, column };
 };
@@ -411,7 +411,7 @@ module.exports.generateFinalPromptForWasteGeneratedInOperations = (
     Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
       
     Context data: ${basePrompt}.`;
-  const column = { waste_generated_in_operations: "-" };
+  const column = { scope_3_5_waste_generated_in_operations: "-" };
 
   return { finalPrompt, column };
 };
@@ -439,7 +439,7 @@ module.exports.generateFinalPromptForBusinessTravel = (basePrompt, year) => {
     Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
       
     Context data: ${basePrompt}.`;
-  const column = { business_travel: "-" };
+  const column = { scope_3_6_business_travel: "-" };
 
   return { finalPrompt, column };
 };
@@ -467,7 +467,7 @@ module.exports.generateFinalPromptForEmployeeCommuting = (basePrompt, year) => {
     Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
       
     Context data: ${basePrompt}.`;
-  const column = { employee_commuting: "-" };
+  const column = { scope_3_7_employee_commuting: "-" };
 
   return { finalPrompt, column };
 };
@@ -498,7 +498,7 @@ module.exports.generateFinalPromptForUpstreamLeasedAssets = (
     Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
       
     Context data: ${basePrompt}.`;
-  const column = { upstream_leased_assets: "-" };
+  const column = { scope_3_8_upstream_leased_assets: "-" };
 
   return { finalPrompt, column };
 };
@@ -529,7 +529,7 @@ module.exports.generateFinalPromptForDownstreamTransportationAndDistribution = (
     Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
       
     Context data: ${basePrompt}.`;
-  const column = { downstream_transportation_and_distribution: "-" };
+  const column = { scope_3_9_downstream_transportation_and_distribution: "-" };
 
   return { finalPrompt, column };
 };
@@ -560,7 +560,7 @@ module.exports.generateFinalPromptForProcessingOfSoldProducts = (
     Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
       
     Context data: ${basePrompt}.`;
-  const column = { processing_of_sold_products: "-" };
+  const column = { scope_3_10_processing_of_sold_products: "-" };
 
   return { finalPrompt, column };
 };
@@ -588,7 +588,7 @@ module.exports.generateFinalPromptForUseOfSoldProducts = (basePrompt, year) => {
     Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
       
     Context data: ${basePrompt}.`;
-  const column = { use_of_sold_products: "-" };
+  const column = { scope_3_11_use_of_sold_products: "-" };
 
   return { finalPrompt, column };
 };
@@ -619,7 +619,7 @@ module.exports.generateFinalPromptForEndOfLifeTreatmentOfSoldProducts = (
     Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
       
     Context data: ${basePrompt}.`;
-  const column = { end_of_life_treatment_of_sold_products: "-" };
+  const column = { scope_3_12_end_of_life_treatment_of_sold_products: "-" };
 
   return { finalPrompt, column };
 };
@@ -650,7 +650,7 @@ module.exports.generateFinalPromptForDownstreamLeasedAssets = (
     Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
       
     Context data: ${basePrompt}.`;
-  const column = { downstream_leased_assets: "-" };
+  const column = { scope_3_13_downstream_leased_assets: "-" };
 
   return { finalPrompt, column };
 };
@@ -706,7 +706,7 @@ module.exports.generateFinalPromptForInvestments = (basePrompt, year) => {
     Provide only the JSON response. Keeping these instructions in mind, now start understanding the context data given below:
       
     Context data: ${basePrompt}.`;
-  const column = { investments: "-" };
+  const column = { scope_3_15_investments: "-" };
 
   return { finalPrompt, column };
 };
